@@ -7,8 +7,8 @@ import abstracts.Item;
 
 public class Dish extends Item implements Iterable<Ingredient>{
 
-	public Dish(int itemID, String itemName, double itemPrice, boolean veganTag, boolean dishTag) {
-		super(itemID, itemName, itemPrice, veganTag, dishTag);
+	public Dish(int itemID, String itemName, double itemPrice, boolean veganTag, boolean vegetarianTag, boolean dishTag) {
+		super(itemID, itemName, itemPrice, veganTag, vegetarianTag, dishTag);
 		
 	}
 

@@ -9,12 +9,15 @@ public class Employee extends User{
 	public String userLastname;
 	public int age;
 	public int rank;
+	private String password;
+	private String phone;
+	private String email;
 	
 	public Employee() {
 		
 	}
 	
-	public Employee(int userID, int employeeID, String userName, String userLastname, int age, int rank) {
+	public Employee(int userID, int employeeID, String userName, String userLastname, int age, int rank, String phone, String email) {
 		super();
 		this.userID = userID;
 		this.employeeID = employeeID;
@@ -22,5 +25,7 @@ public class Employee extends User{
 		this.userLastname = userLastname;
 		this.age = age;
 		this.rank = rank;
+		this.phone = phone;
+		this.email = email;
 	}
 }

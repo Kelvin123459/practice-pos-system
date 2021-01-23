@@ -7,23 +7,17 @@ public abstract class Item{
 	private String itemName;
 	private double itemPrice;
 	private boolean veganTag;
+	private boolean vegetarianTag;
 	private boolean dishTag;
-	
-	public boolean isDishTag() {
-		return dishTag;
-	}
 
-	public void setDishTag(boolean dishTag) {
-		this.dishTag = dishTag;
-	}
-
-	public Item(int itemID, String itemName, double itemPrice, boolean veganTag, boolean dishTag) {
+	public Item(int itemID, String itemName, double itemPrice, boolean veganTag, boolean vegetarianTag, boolean dishTag) {
 		super();
 		this.itemID = itemID;
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
 		this.veganTag = veganTag;
 		this.dishTag = dishTag;
+		this.vegetarianTag = vegetarianTag;
 	}
 	
 	public boolean isVeganTag() {
@@ -49,5 +43,20 @@ public abstract class Item{
 	}
 	public void setItemPrice(double itemPrice) {
 		this.itemPrice = itemPrice;
+	}
+	public boolean isDishTag() {
+		return dishTag;
+	}
+
+	public void setDishTag(boolean dishTag) {
+		this.dishTag = dishTag;
+	}
+
+	public boolean isVegetarianTag() {
+		return vegetarianTag;
+	}
+
+	public void setVegetarianTag(boolean vegetarianTag) {
+		this.vegetarianTag = vegetarianTag;
 	}
 }
