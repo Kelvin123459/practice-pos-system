@@ -17,7 +17,7 @@ public class DBTest {
 		try {
 //			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("Establishing connection...");
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "Kelvin", "TimeFlamer111");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "Kelvin", "");
 			System.out.println("Connection successful");
 		} catch (SQLException e) {
 			Logger.getLogger(DBTest.class.getName()).log(Level.SEVERE, null, e);
