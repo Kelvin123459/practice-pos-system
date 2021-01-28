@@ -24,6 +24,7 @@ public class LoginHandler extends Application{
 
 	Button log;
 	ResultSet rs;
+	public boolean auth;
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -45,7 +46,12 @@ public class LoginHandler extends Application{
 			
 			@Override
 			public void handle(ActionEvent event) {
-				validate(userField.getText().toString(), passField.getText().toString());
+				auth = validate(userField.getText().toString(), passField.getText().toString());
+				if (auth) {
+					PrimaryHandler prim = new PrimaryHandler();
+					prim.display();
+					primaryStage.close();
+				}
 			}
 		});
 		
